@@ -1,10 +1,11 @@
 Bookstore::Application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-get "/books" => "books#index", as: 'books'
+  get "/books" => "books#index", as: 'books'
+  get "/books/:id" => "books#show", as: 'book'
+
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
