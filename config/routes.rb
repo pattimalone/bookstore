@@ -1,13 +1,7 @@
 Bookstore::Application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-  get "/books" => "books#index", as: 'books'
-  get "/books/new" => "books#new", as: 'new_book'
-  get "/books/:id" => "books#show", as: 'book'
-  post "/books" => "books#create"
-  get "/books/:id/edit" => "books#edit", as: 'edit_book'
-patch "/books/:id" => "books#update"
-delete "/books/:id" => "books#destroy"
+  resources :books
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
